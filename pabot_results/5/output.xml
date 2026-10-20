@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 7.5 (Python 3.14.3 on win32)" generated="2026-10-17T17:24:04.469842" rpa="false" schemaversion="5">
+<suite id="s1" name="RobotFramework" source="C:\Users\Dineshma\PycharmProjects\RobotFramework">
+<suite id="s1-s1" name="Testdemo6" source="C:\Users\Dineshma\PycharmProjects\RobotFramework\testdemo6.robot">
+<test id="s1-s1-t1" name="Validate checkout page" line="25">
+<kw name="open the browser with the login url" owner="Generic" type="SETUP">
+<kw name="Open Browser" owner="SeleniumLibrary">
+<msg time="2026-10-17T17:24:05.225248" level="INFO">Opening browser 'chrome' to base url 'https://rahulshettyacademy.com/loginpagePractise/'.</msg>
+<arg>${URL}</arg>
+<arg>chrome</arg>
+<arg>options=add_experimental_option("prefs", ${PREFS});add_argument("--disable-features=PasswordLeakDetection");add_argument("--incognito")</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<status status="PASS" start="2026-10-17T17:24:05.224856" elapsed="3.833261"/>
+</kw>
+<kw name="Maximize Browser Window" owner="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" start="2026-10-17T17:24:09.058447" elapsed="0.045100"/>
+</kw>
+<status status="PASS" start="2026-10-17T17:24:05.223784" elapsed="3.880032"/>
+</kw>
+<kw name="Fill the login Form" owner="Landingpage">
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2026-10-17T17:24:09.105597" level="INFO">Typing text 'rahulshettyacademy' into text field 'id:username'.</msg>
+<arg>id:username</arg>
+<arg>${username}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2026-10-17T17:24:09.104950" elapsed="0.131532"/>
+</kw>
+<kw name="Input Password" owner="SeleniumLibrary">
+<msg time="2026-10-17T17:24:09.237358" level="INFO">Typing password into text field 'id:password'.</msg>
+<msg time="2026-10-17T17:24:09.286808" level="INFO">Temporally setting log level to: NONE</msg>
+<arg>id:password</arg>
+<arg>${password}</arg>
+<doc>Types the given password into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2026-10-17T17:24:09.236883" elapsed="0.188510"/>
+</kw>
+<kw name="Click Button" owner="SeleniumLibrary">
+<msg time="2026-10-17T17:24:09.426206" level="INFO">Clicking button 'signInBtn'.</msg>
+<arg>signInBtn</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<status status="PASS" start="2026-10-17T17:24:09.425743" elapsed="0.169352"/>
+</kw>
+<arg>${username}</arg>
+<arg>${password}</arg>
+<status status="PASS" start="2026-10-17T17:24:09.104290" elapsed="0.491047"/>
+</kw>
+<kw name="wait until it locator is visible" owner="Cartpage">
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<msg time="2026-10-17T17:24:14.826043" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-1.png"&gt;&lt;img src="selenium-screenshot-1.png" width="800px"&gt;&lt;/a&gt;</msg>
+<msg time="2026-10-17T17:24:14.826350" level="FAIL">Element 'css:.nav-link' not visible after 5 seconds.</msg>
+<arg>${check out}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="FAIL" start="2026-10-17T17:24:09.596179" elapsed="5.317768">Element 'css:.nav-link' not visible after 5 seconds.</status>
+</kw>
+<status status="FAIL" start="2026-10-17T17:24:09.595681" elapsed="5.318527">Element 'css:.nav-link' not visible after 5 seconds.</status>
+</kw>
+<kw name="verify card title in the cart page" owner="Cartpage">
+<status status="NOT RUN" start="2026-10-17T17:24:14.914596" elapsed="0.000050"/>
+</kw>
+<kw name="Helloworld" owner="Shop">
+<status status="NOT RUN" start="2026-10-17T17:24:14.914775" elapsed="0.000029"/>
+</kw>
+<kw name="Add Items To Cart" owner="Shop">
+<arg>${productlist}</arg>
+<status status="NOT RUN" start="2026-10-17T17:24:14.914896" elapsed="0.000028"/>
+</kw>
+<kw name="Verify the product in the list and checkout" owner="checkoutpage">
+<status status="NOT RUN" start="2026-10-17T17:24:14.915159" elapsed="0.000044"/>
+</kw>
+<kw name="Verify the product in the list and checkout" owner="Confirmationpages">
+<status status="NOT RUN" start="2026-10-17T17:24:14.915387" elapsed="0.000041"/>
+</kw>
+<kw name="Close Browser Session" owner="Generic" type="TEARDOWN">
+<kw name="Close Browser" owner="SeleniumLibrary">
+<doc>Closes the current browser.</doc>
+<status status="PASS" start="2026-10-17T17:24:14.916293" elapsed="2.333053"/>
+</kw>
+<status status="PASS" start="2026-10-17T17:24:14.915783" elapsed="2.333778"/>
+</kw>
+<status status="FAIL" start="2026-10-17T17:24:05.223102" elapsed="12.026544">Element 'css:.nav-link' not visible after 5 seconds.</status>
+</test>
+<doc>To validate the Login form</doc>
+<status status="FAIL" start="2026-10-17T17:24:04.527531" elapsed="12.723220"/>
+</suite>
+<status status="FAIL" start="2026-10-17T17:24:04.471973" elapsed="12.779253"/>
+</suite>
+<statistics>
+<total>
+<stat pass="0" fail="1" skip="0">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat name="RobotFramework" id="s1" pass="0" fail="1" skip="0">RobotFramework</stat>
+<stat name="Testdemo6" id="s1-s1" pass="0" fail="1" skip="0">RobotFramework.Testdemo6</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>

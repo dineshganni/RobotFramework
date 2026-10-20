@@ -1,0 +1,59 @@
+[INFO]    Initialized logging in .\pabot_results
+[INFO]    Robot Framework remote server at 127.0.0.1:8270 started.
+[DEBUG]   2026-10-17 17:23:33.442421 [PID:39032] [0] [ID:2] EXECUTING RobotFramework.Testdemo3
+[DEBUG]   2026-10-17 17:23:33.446963 [PID:5280] [1] [ID:0] EXECUTING RobotFramework.Testdemo
+[DEBUG]   2026-10-17 17:23:33.447964 [PID:9784] [3] [ID:3] EXECUTING RobotFramework.Testdemo4
+[DEBUG]   2026-10-17 17:23:33.451042 [PID:16984] [2] [ID:1] EXECUTING RobotFramework.Testdemo2
+[DEBUG]   2026-10-17 17:23:38.466625 [PID:39032] [0] [ID:2] still running RobotFramework.Testdemo3 after 5.0s
+[DEBUG]   2026-10-17 17:23:38.468822 [PID:9784] [3] [ID:3] still running RobotFramework.Testdemo4 after 5.0s
+[DEBUG]   2026-10-17 17:23:38.495769 [PID:5280] [1] [ID:0] still running RobotFramework.Testdemo after 5.0s
+[DEBUG]   2026-10-17 17:23:38.496145 [PID:16984] [2] [ID:1] still running RobotFramework.Testdemo2 after 5.0s
+[DEBUG]   2026-10-17 17:23:48.757182 [PID:9784] [3] [ID:3] still running RobotFramework.Testdemo4 after 15.0s
+[DEBUG]   2026-10-17 17:23:48.777766 [PID:39032] [0] [ID:2] still running RobotFramework.Testdemo3 after 15.0s
+[DEBUG]   2026-10-17 17:23:49.964757 [PID:5280] [1] [ID:0] still running RobotFramework.Testdemo after 15.0s
+[DEBUG]   2026-10-17 17:23:49.965059 [PID:16984] [2] [ID:1] still running RobotFramework.Testdemo2 after 15.0s
+[INFO]    2026-10-17 17:23:52.086707 [PID:5280] [1] [ID:0] PASSED RobotFramework.Testdemo in 18.7 seconds
+[DEBUG]   2026-10-17 17:23:52.134739 [PID:34664] [0] [ID:4] EXECUTING RobotFramework.Testdemo5
+[DEBUG]   2026-10-17 17:23:57.748299 [PID:34664] [0] [ID:4] still running RobotFramework.Testdemo5 after 5.0s
+[INFO]    2026-10-17 17:24:03.489350 [PID:39032] [0] [ID:2] PASSED RobotFramework.Testdemo3 in 30.1 seconds
+[DEBUG]   2026-10-17 17:24:03.515343 [PID:11536] [1] [ID:5] EXECUTING RobotFramework.Testdemo6
+[DEBUG]   2026-10-17 17:24:03.962876 [PID:9784] [3] [ID:3] still running RobotFramework.Testdemo4 after 30.0s
+[DEBUG]   2026-10-17 17:24:05.725302 [PID:16984] [2] [ID:1] still running RobotFramework.Testdemo2 after 30.0s
+[DEBUG]   2026-10-17 17:24:07.888999 [PID:34664] [0] [ID:4] still running RobotFramework.Testdemo5 after 15.0s
+[DEBUG]   2026-10-17 17:24:08.552179 [PID:11536] [1] [ID:5] still running RobotFramework.Testdemo6 after 5.0s
+[INFO]    2026-10-17 17:24:09.124569 [PID:16984] [2] [ID:1] PASSED RobotFramework.Testdemo2 in 35.7 seconds
+[INFO]    2026-10-17 17:24:13.468595 [PID:9784] [3] [ID:3] PASSED RobotFramework.Testdemo4 in 40.0 seconds
+[INFO]    2026-10-17 17:24:17.497866 [PID:11536] [1] [ID:5] Execution failed in RobotFramework.Testdemo6 with 1 failing test(s)
+==============================================================================
+RobotFramework
+==============================================================================
+RobotFramework.Testdemo6 :: To validate the Login form
+==============================================================================
+Validate checkout page                                                | FAIL |
+Element 'css:.nav-link' not visible after 5 seconds.
+------------------------------------------------------------------------------
+RobotFramework.Testdemo6 :: To validate the Login form                | FAIL |
+1 test, 0 passed, 1 failed
+==============================================================================
+RobotFramework                                                        | FAIL |
+1 test, 0 passed, 1 failed
+==============================================================================
+Output:  C:\Users\Dineshma\PycharmProjects\RobotFramework\pabot_results\5\output.xml
+[DEBUG]   2026-10-17 17:24:22.989964 [PID:34664] [0] [ID:4] still running RobotFramework.Testdemo5 after 30.0s
+[INFO]    2026-10-17 17:24:26.126396 [PID:34664] [0] [ID:4] PASSED RobotFramework.Testdemo5 in 34.0 seconds
+[INFO]    11 tests, 10 passed, 1 failed, 0 skipped.
+[INFO]    ===================================================
+[INFO]    Output:  C:\Users\Dineshma\PycharmProjects\RobotFramework\output.xml
+[INFO]    Log:     
+[INFO]    C:\Users\Dineshma\PycharmProjects\RobotFramework\log.html
+[INFO]    
+[INFO]    Report:  
+[INFO]    C:\Users\Dineshma\PycharmProjects\RobotFramework\report.html
+[INFO]    
+[DEBUG]   Finalizing Pabot execution...
+[DEBUG]   Stopping PabotLib process
+[INFO]    Robot Framework remote server at 127.0.0.1:8270 stopped.
+[DEBUG]   PabotLib process stopped
+[INFO]    Total testing: 2 minutes 52.50 seconds
+[INFO]    Elapsed time:  54.38 seconds
+[DEBUG]   Logs flushed successfully.

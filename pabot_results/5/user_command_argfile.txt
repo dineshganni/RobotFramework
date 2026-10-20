@@ -1,0 +1,16 @@
+--suite RobotFramework.Testdemo6
+--variable CALLER_ID:cd5a47e7172048dab7dcf82a947611ff
+--variable PABOTLIBURI:127.0.0.1:8270
+--variable PABOTEXECUTIONPOOLID:1
+--variable PABOTISLASTEXECUTIONINPOOL:1
+--variable PABOTNUMBEROFPROCESSES:4
+--variable PABOTQUEUEINDEX:5
+--variable PABOTLASTLEVEL:
+--output output.xml
+--log NONE
+--report NONE
+--xunit NONE
+--outputdir .\pabot_results\5
+--consolecolors off
+--consolemarkers off
+.

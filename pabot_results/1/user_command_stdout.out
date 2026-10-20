@@ -1,0 +1,16 @@
+==============================================================================
+RobotFramework
+==============================================================================
+RobotFramework.Testdemo2 :: To validate the Login form
+==============================================================================
+Validate checkout page                                                | PASS |
+------------------------------------------------------------------------------
+Validate the poppage                                                  | PASS |
+------------------------------------------------------------------------------
+RobotFramework.Testdemo2 :: To validate the Login form                | PASS |
+2 tests, 2 passed, 0 failed
+==============================================================================
+RobotFramework                                                        | PASS |
+2 tests, 2 passed, 0 failed
+==============================================================================
+Output:  C:\Users\Dineshma\PycharmProjects\RobotFramework\pabot_results\1\output.xml

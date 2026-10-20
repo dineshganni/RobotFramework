@@ -1,0 +1,4 @@
+*** Test Cases ***, ${username}, ${InputPassword}
+Invalidusername,asdfghj,ertyui4567
+Invaliduserpassword,asdfghj,Testing@123
+Spclchar,h#$%^&%,ertyui4sdg
