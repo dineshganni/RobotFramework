@@ -1,0 +1,174 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 7.5 (Python 3.14.3 on win32)" generated="2026-10-17T17:23:34.272979" rpa="false" schemaversion="5">
+<suite id="s1" name="RobotFramework" source="C:\Users\Dineshma\PycharmProjects\RobotFramework">
+<suite id="s1-s1" name="Testdemo3" source="C:\Users\Dineshma\PycharmProjects\RobotFramework\testdemo3.robot">
+<test id="s1-s1-t1" name="Validate the childwidown page" line="12">
+<kw name="open the browser with the login url" owner="resources" type="SETUP">
+<kw name="Open Browser" owner="SeleniumLibrary">
+<msg time="2026-10-17T17:23:34.908014" level="INFO">Opening browser 'chrome' to base url 'https://rahulshettyacademy.com/loginpagePractise/'.</msg>
+<msg time="2026-10-17T17:23:37.664118" level="WARN">Metadata file C:\Users\Dineshma\.cache\selenium\se-metadata.json cannot be parsed: EOF while parsing a string at line 22 column 3. Using empty metadata</msg>
+<arg>${URL}</arg>
+<arg>chrome</arg>
+<arg>options=add_experimental_option("prefs", ${PREFS});add_argument("--disable-features=PasswordLeakDetection");add_argument("--incognito")</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<status status="PASS" start="2026-10-17T17:23:34.907769" elapsed="9.381712"/>
+</kw>
+<kw name="Maximize Browser Window" owner="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" start="2026-10-17T17:23:44.290176" elapsed="0.310753"/>
+</kw>
+<status status="PASS" start="2026-10-17T17:23:34.907037" elapsed="9.694296"/>
+</kw>
+<kw name="Now click on the child page">
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2026-10-17T17:23:44.606363" level="INFO">Clicking element 'xpath:(//a[@class="blinkingText"])[1]'.</msg>
+<arg>xpath:(//a[@class="blinkingText"])[1]</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2026-10-17T17:23:44.604371" elapsed="0.894477"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2026-10-17T17:23:50.505442" level="INFO">Slept 5 seconds.</msg>
+<arg>5</arg>
+<doc>Pauses execution for the given time.</doc>
+<status status="PASS" start="2026-10-17T17:23:45.499381" elapsed="5.006319"/>
+</kw>
+<status status="PASS" start="2026-10-17T17:23:44.602797" elapsed="5.903265"/>
+</kw>
+<kw name="validate the new page title info">
+<kw name="Switch Window" owner="SeleniumLibrary">
+<arg>NEW</arg>
+<doc>Switches to browser window matching ``locator``.</doc>
+<status status="PASS" start="2026-10-17T17:23:50.507653" elapsed="0.033347"/>
+</kw>
+<kw name="Get Text" owner="SeleniumLibrary">
+<msg time="2026-10-17T17:23:50.604517" level="INFO">${title} = DOCUMENTS REQUEST</msg>
+<var>${title}</var>
+<arg>css:.inner-box</arg>
+<doc>Returns the text value of the element identified by ``locator``.</doc>
+<status status="PASS" start="2026-10-17T17:23:50.541428" elapsed="0.063283"/>
+</kw>
+<kw name="Element Text Should Be" owner="SeleniumLibrary">
+<msg time="2026-10-17T17:23:50.605851" level="INFO">Verifying element 'css:.inner-box' contains exact text 'DOCUMENTS REQUEST'.</msg>
+<arg>${New Message}</arg>
+<arg>DOCUMENTS REQUEST</arg>
+<doc>Verifies that element ``locator`` contains exact the text ``expected``.</doc>
+<status status="PASS" start="2026-10-17T17:23:50.605127" elapsed="0.034234"/>
+</kw>
+<status status="PASS" start="2026-10-17T17:23:50.506702" elapsed="0.132947"/>
+</kw>
+<kw name="validate the email address">
+<kw name="Get Text" owner="SeleniumLibrary">
+<msg time="2026-10-17T17:23:50.675787" level="INFO">${email} = Please email us at mentor@rahulshettyacademy.com with below template to receive response</msg>
+<var>${email}</var>
+<arg>css:.red</arg>
+<doc>Returns the text value of the element identified by ``locator``.</doc>
+<status status="PASS" start="2026-10-17T17:23:50.640821" elapsed="0.035065"/>
+</kw>
+<kw name="Split String" owner="String">
+<msg time="2026-10-17T17:23:50.676947" level="INFO">@{output} = [ Please email us  |  mentor@rahulshettyacademy.com with below templ | e to receive response ]</msg>
+<var>@{output}</var>
+<arg>${email}</arg>
+<arg>at</arg>
+<doc>Splits the `string` using `separator` as a delimiter string.</doc>
+<status status="PASS" start="2026-10-17T17:23:50.676271" elapsed="0.000759"/>
+</kw>
+<kw name="Get From List" owner="Collections">
+<msg time="2026-10-17T17:23:50.677949" level="INFO">${mail} =  mentor@rahulshettyacademy.com with below templ</msg>
+<var>${mail}</var>
+<arg>${output}</arg>
+<arg>1</arg>
+<doc>Returns the value specified with an `index` from `list`.</doc>
+<status status="PASS" start="2026-10-17T17:23:50.677396" elapsed="0.000618"/>
+</kw>
+<kw name="Log" owner="BuiltIn">
+<msg time="2026-10-17T17:23:50.679542" level="INFO"> mentor@rahulshettyacademy.com with below templ</msg>
+<arg>${mail}</arg>
+<doc>Logs the given message with the given level.</doc>
+<status status="PASS" start="2026-10-17T17:23:50.678391" elapsed="0.001329"/>
+</kw>
+<kw name="Split String" owner="String">
+<msg time="2026-10-17T17:23:50.680770" level="INFO">${finalmail} = ['Please', 'email', 'us', 'at', 'mentor@rahulshettyacademy.com', 'with', 'below', 'template', 'to', 'receive', 'response']</msg>
+<var>${finalmail}</var>
+<arg>${email}</arg>
+<doc>Splits the `string` using `separator` as a delimiter string.</doc>
+<status status="PASS" start="2026-10-17T17:23:50.680148" elapsed="0.000714"/>
+</kw>
+<kw name="Get From List" owner="Collections">
+<msg time="2026-10-17T17:23:50.681813" level="INFO">${finalmail_new} = Please</msg>
+<var>${finalmail_new}</var>
+<arg>${finalmail}</arg>
+<arg>0</arg>
+<doc>Returns the value specified with an `index` from `list`.</doc>
+<status status="PASS" start="2026-10-17T17:23:50.681298" elapsed="0.000597"/>
+</kw>
+<kw name="Set Global Variable" owner="BuiltIn">
+<msg time="2026-10-17T17:23:50.683737" level="INFO">${finalmail_new} = Please</msg>
+<arg>${finalmail_new}</arg>
+<doc>Makes the variable available globally in all tests and suites.</doc>
+<status status="PASS" start="2026-10-17T17:23:50.682360" elapsed="0.001536"/>
+</kw>
+<status status="PASS" start="2026-10-17T17:23:50.640055" elapsed="0.044055"/>
+</kw>
+<kw name="open the browser with the login url" owner="resources">
+<kw name="Open Browser" owner="SeleniumLibrary">
+<msg time="2026-10-17T17:23:50.686742" level="INFO">Opening browser 'chrome' to base url 'https://rahulshettyacademy.com/loginpagePractise/'.</msg>
+<arg>${URL}</arg>
+<arg>chrome</arg>
+<arg>options=add_experimental_option("prefs", ${PREFS});add_argument("--disable-features=PasswordLeakDetection");add_argument("--incognito")</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<status status="PASS" start="2026-10-17T17:23:50.685602" elapsed="5.782112"/>
+</kw>
+<kw name="Maximize Browser Window" owner="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" start="2026-10-17T17:23:56.468067" elapsed="0.173528"/>
+</kw>
+<status status="PASS" start="2026-10-17T17:23:50.684439" elapsed="5.958139"/>
+</kw>
+<kw name="Enter the email address from mailoutput">
+<kw name="Switch Window" owner="SeleniumLibrary">
+<arg>MAIN</arg>
+<doc>Switches to browser window matching ``locator``.</doc>
+<status status="PASS" start="2026-10-17T17:23:56.643994" elapsed="0.045234"/>
+</kw>
+<kw name="Get Title" owner="SeleniumLibrary">
+<doc>Returns the title of the current page.</doc>
+<status status="PASS" start="2026-10-17T17:23:56.689738" elapsed="0.056017"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2026-10-17T17:23:56.746635" level="INFO">Typing text 'Please' into text field 'id:username'.</msg>
+<arg>id:username</arg>
+<arg>${finalmail_new}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2026-10-17T17:23:56.746105" elapsed="0.824451"/>
+</kw>
+<status status="PASS" start="2026-10-17T17:23:56.643166" elapsed="0.927596"/>
+</kw>
+<kw name="Close Browser Session" owner="resources" type="TEARDOWN">
+<kw name="Close Browser" owner="SeleniumLibrary">
+<doc>Closes the current browser.</doc>
+<status status="PASS" start="2026-10-17T17:23:57.572530" elapsed="3.172872"/>
+</kw>
+<status status="PASS" start="2026-10-17T17:23:57.571587" elapsed="3.174123"/>
+</kw>
+<status status="PASS" start="2026-10-17T17:23:34.906427" elapsed="25.839398"/>
+</test>
+<doc>To validate the Login form</doc>
+<status status="PASS" start="2026-10-17T17:23:34.331359" elapsed="26.416100"/>
+</suite>
+<status status="PASS" start="2026-10-17T17:23:34.274799" elapsed="26.473824"/>
+</suite>
+<statistics>
+<total>
+<stat pass="1" fail="0" skip="0">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat name="RobotFramework" id="s1" pass="1" fail="0" skip="0">RobotFramework</stat>
+<stat name="Testdemo3" id="s1-s1" pass="1" fail="0" skip="0">RobotFramework.Testdemo3</stat>
+</suite>
+</statistics>
+<errors>
+<msg time="2026-10-17T17:23:37.664118" level="WARN">Metadata file C:\Users\Dineshma\.cache\selenium\se-metadata.json cannot be parsed: EOF while parsing a string at line 22 column 3. Using empty metadata</msg>
+</errors>
+</robot>
